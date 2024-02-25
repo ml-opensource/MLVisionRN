@@ -10,6 +10,11 @@ https://github.com/Sly777/MLVisionRN/assets/694940/9416c60f-e0e9-48d3-9b67-a2fd4
 - **React Native**: The application is developed using React Native, a popular framework for building cross-platform applications.
 - **60 FPS**: The application is designed to run at 60 frames per second (FPS) on both Vision Pro and iPhone devices to create a smooth user and native experience.
 
+## Missing Features :)
+
+- 3D Models are not supported at the moment due to the lack of support for 3D models in React Native for VisionOS.
+- Multi Window support is not working due to limitation of react-native-visionos library (p.s: [it is on the way](https://github.com/callstack/react-native-visionos/pull/117)).
+
 ## Installation
 
 - Start by navigating to the root directory and run `yarn` or `yarn install` to install the necessary packages.
