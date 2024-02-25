@@ -4,7 +4,13 @@ This repository contains a universal application example developed using React N
 
 https://github.com/Sly777/MLVisionRN/assets/694940/9416c60f-e0e9-48d3-9b67-a2fd45662366
 
-# Installation
+## Features
+
+- **Universal Application**: This application is designed to run on both Vision Pro and iPhone devices (possibly on iPad as well).
+- **React Native**: The application is developed using React Native, a popular framework for building cross-platform applications.
+- **60 FPS**: The application is designed to run at 60 frames per second (FPS) on both Vision Pro and iPhone devices to create a smooth user and native experience.
+
+## Installation
 
 - Start by navigating to the root directory and run `yarn` or `yarn install` to install the necessary packages.
 - Next, navigate to the `visionos` folder and execute the following commands:
@@ -15,11 +21,11 @@ https://github.com/Sly777/MLVisionRN/assets/694940/9416c60f-e0e9-48d3-9b67-a2fd4
 - After the application has been built, execute `yarn start` to launch the metro server in a separate terminal window.
 - Finally, open the application on your device or simulator to see it in action.
 
-# Troubleshooting
+## Troubleshooting
 
 If you encounter any issues during the installation or usage of this application, please refer to the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page. If you are unable to resolve the issue, please open an issue on this repository.
 
-# Learn More
+## Learn More
 
 To learn more about React Native, take a look at the following resources:
 
