@@ -149,7 +149,7 @@ const styles = StyleSheet.create({
   },
   backgroundImage: {
     position: 'absolute',
-    right: 0,
+    right: -150,
     bottom: '-70%',
     aspectRatio: 1,
   },
