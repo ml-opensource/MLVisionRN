@@ -10,8 +10,8 @@ import {
 } from 'react-native';
 import {TouchableOpacity as VisionTouchableOpacity} from '@callstack/react-native-visionos';
 import styled from 'bomanti';
-import { getOSName } from '../../helpers';
-import { ScrollView } from 'react-native-gesture-handler';
+import {getOSName} from '../../helpers';
+import {ScrollView} from 'react-native-gesture-handler';
 
 const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
@@ -22,12 +22,15 @@ interface DetailsScreenProps {
   navigation: any;
 }
 
-const MixedView = OSName === 'visionos' ? ({ children }: { children: React.ReactNode }) => (<>{children}</>) : ScrollView;
+const MixedView =
+  OSName === 'visionos'
+    ? ({children}: {children: React.ReactNode}) => <>{children}</>
+    : ScrollView;
 const DetailsScreen = ({route, navigation}: DetailsScreenProps) => {
   const {data} = route.params;
 
   const onButtonPress = () => {
-    Alert.alert(`It's not implemented yet.`);
+    Alert.alert("It's not implemented yet.");
   };
 
   useLayoutEffect(() => {
@@ -37,8 +40,7 @@ const DetailsScreen = ({route, navigation}: DetailsScreenProps) => {
   }, [navigation, data.eyebrow]);
 
   return (
-    <MixedView
-      contentContainerStyle={[styles.scrollView]}>
+    <MixedView contentContainerStyle={[styles.scrollView]}>
       <StyledContainer>
         <View style={[styles.imgBgContainer]}>
           {data.backgroundImage && (
@@ -72,8 +74,10 @@ const StyledButton = styled(
   paddingHorizontal: 18,
   paddingVertical: 13,
   borderRadius: 30,
-  backgroundColor: 'rgba(255, 255, 255, 0.2)',
+  backgroundColor: 'rgba(255, 255, 255, 0.15)',
   overflow: 'hidden',
+  justifyContent: 'center',
+  alignItems: 'center',
 }));
 
 const StyledButtonText = styled(Text)(() => ({

@@ -13,7 +13,7 @@
     "pod-install": "npx pod-install visionos"
   },
   "dependencies": {
-    "@callstack/react-native-visionos": "0.73.5",
+    "@callstack/react-native-visionos": "0.73.6",
     "@react-navigation/native": "^6.1.12",
     "@react-navigation/native-stack": "^6.9.20",
     "bomanti": "^2.0.0",

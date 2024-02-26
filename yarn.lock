@@ -1667,9 +1667,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@callstack/react-native-visionos@npm:0.73.5":
-  version: 0.73.5
-  resolution: "@callstack/react-native-visionos@npm:0.73.5"
+"@callstack/react-native-visionos@npm:0.73.6":
+  version: 0.73.6
+  resolution: "@callstack/react-native-visionos@npm:0.73.6"
   dependencies:
     "@jest/create-cache-key-function": ^29.6.3
     "@react-native-community/cli": 13.5.1
@@ -1714,7 +1714,7 @@ __metadata:
     react: 18.2.0
   bin:
     react-native-visionos: cli.js
-  checksum: f2fd91a871ae8970a38f1b534187b906c5fddfe05388b83f3da1e8a96ece8cc4f859ba54d98855de50a7da4c1c4d39c7c05bbe3ee7d38b9438f229fbd33bbbc5
+  checksum: 7dbe7f5d831390ef264fc86d78a0efc864931af486394e8c1f1ee6dadfe45f26e561efbdf1f5578082d1dbb2f954c62c22a150036da3c5ee59e96c3f8dc4850e
   languageName: node
   linkType: hard
 
@@ -3402,7 +3402,7 @@ __metadata:
     "@babel/preset-env": ^7.20.0
     "@babel/runtime": ^7.20.0
     "@callstack/out-of-tree-platforms": 0.73.5
-    "@callstack/react-native-visionos": 0.73.5
+    "@callstack/react-native-visionos": 0.73.6
     "@react-native/babel-preset": 0.73.21
     "@react-native/eslint-config": 0.73.2
     "@react-native/metro-config": 0.73.5
