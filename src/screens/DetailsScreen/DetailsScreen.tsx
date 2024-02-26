@@ -6,6 +6,7 @@ import {
   Text,
   Image,
   TouchableOpacity as MainTouchableOpacity,
+  Alert,
 } from 'react-native';
 import {TouchableOpacity as VisionTouchableOpacity} from '@callstack/react-native-visionos';
 import styled from 'bomanti';
@@ -24,6 +25,10 @@ interface DetailsScreenProps {
 const MixedView = OSName === 'visionos' ? ({ children }: { children: React.ReactNode }) => (<>{children}</>) : ScrollView;
 const DetailsScreen = ({route, navigation}: DetailsScreenProps) => {
   const {data} = route.params;
+
+  const onButtonPress = () => {
+    Alert.alert(`It's not implemented yet.`);
+  };
 
   useLayoutEffect(() => {
     navigation.setOptions({
@@ -46,7 +51,7 @@ const DetailsScreen = ({route, navigation}: DetailsScreenProps) => {
         <StyledContent>
           <Text style={[styles.heading]}>{data.heading}</Text>
           <Text style={[styles.overview]}>{data.overview}</Text>
-          <StyledButton>
+          <StyledButton onPress={onButtonPress}>
             <StyledButtonText>{data.callToAction}</StyledButtonText>
           </StyledButton>
         </StyledContent>
