@@ -41,7 +41,7 @@ const BoxContainer = styled(
     width: '100%',
   },
   width: '30%',
-  paddingHorizontal: 10,
+  paddingHorizontal: 18,
   paddingVertical: 20,
   borderRadius: 8,
   overflow: 'hidden',
@@ -50,8 +50,10 @@ const BoxContainer = styled(
 const styles = StyleSheet.create({
   columnEyebrow: {
     fontSize: 16,
-    color: 'gray',
+    color: 'white',
     fontWeight: 'bold',
+    opacity: 0.5,
+    marginBottom: 3,
   },
   columnTitle: {
     fontSize: 32,
@@ -60,7 +62,7 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   columnText: {
-    fontSize: 16,
+    fontSize: 18,
     color: 'white',
   },
 });

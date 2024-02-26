@@ -1,15 +1,27 @@
 import React, {useLayoutEffect} from 'react';
-import {View, StyleSheet, Dimensions, Text, Image} from 'react-native';
+import {
+  View,
+  StyleSheet,
+  Dimensions,
+  Text,
+  Image,
+  TouchableOpacity as MainTouchableOpacity,
+} from 'react-native';
+import {TouchableOpacity as VisionTouchableOpacity} from '@callstack/react-native-visionos';
 import styled from 'bomanti';
+import { getOSName } from '../../helpers';
+import { ScrollView } from 'react-native-gesture-handler';
 
 const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
+const OSName = getOSName();
 
 interface DetailsScreenProps {
   route: any;
   navigation: any;
 }
 
+const MixedView = OSName === 'visionos' ? ({ children }: { children: React.ReactNode }) => (<>{children}</>) : ScrollView;
 const DetailsScreen = ({route, navigation}: DetailsScreenProps) => {
   const {data} = route.params;
 
@@ -20,25 +32,49 @@ const DetailsScreen = ({route, navigation}: DetailsScreenProps) => {
   }, [navigation, data.eyebrow]);
 
   return (
-    <StyledContainer>
-      <View style={[styles.imgBgContainer]}>
-        {data.backgroundImage && (
-          <Image
-            source={data.backgroundImage}
-            style={[styles.backgroundImage]}
-          />
-        )}
-      </View>
-      <StyledContent>
-        <Text style={[styles.heading]}>{data.heading}</Text>
-        <Text style={[styles.overview]}>{data.overview}</Text>
-      </StyledContent>
-      <StyledRightImageContainer>
-        {data.rightImage && <StyledRightImage source={data.rightImage} />}
-      </StyledRightImageContainer>
-    </StyledContainer>
+    <MixedView
+      contentContainerStyle={[styles.scrollView]}>
+      <StyledContainer>
+        <View style={[styles.imgBgContainer]}>
+          {data.backgroundImage && (
+            <Image
+              source={data.backgroundImage}
+              style={[styles.backgroundImage]}
+            />
+          )}
+        </View>
+        <StyledContent>
+          <Text style={[styles.heading]}>{data.heading}</Text>
+          <Text style={[styles.overview]}>{data.overview}</Text>
+          <StyledButton>
+            <StyledButtonText>{data.callToAction}</StyledButtonText>
+          </StyledButton>
+        </StyledContent>
+        <StyledRightImageContainer>
+          {data.rightImage && <StyledRightImage source={data.rightImage} />}
+        </StyledRightImageContainer>
+      </StyledContainer>
+    </MixedView>
   );
 };
+
+const StyledButton = styled(
+  OSName === 'visionos' ? VisionTouchableOpacity : MainTouchableOpacity,
+)(() => ({
+  mobile: {
+    width: '100%',
+  },
+  paddingHorizontal: 18,
+  paddingVertical: 13,
+  borderRadius: 30,
+  backgroundColor: 'rgba(255, 255, 255, 0.2)',
+  overflow: 'hidden',
+}));
+
+const StyledButtonText = styled(Text)(() => ({
+  fontSize: 18,
+  color: 'white',
+}));
 
 const StyledContainer = styled(View)(() => ({
   flex: 1,
@@ -55,15 +91,17 @@ const StyledContainer = styled(View)(() => ({
 
 const StyledContent = styled(View)(() => ({
   flexDirection: 'column',
-  justifyContent: 'flex-start',
-  width: '40%',
-  height: '100%',
+  justifyContent: 'center',
+  width: '45%',
+  height: '90%',
   alignItems: 'flex-start',
   alignSelf: 'flex-start',
   paddingHorizontal: 47,
-  paddingVertical: 63,
+  paddingVertical: 0,
   mobile: {
     width: '100%',
+    paddingVertical: 63,
+    justifyContent: 'flex-start',
   },
 }));
 
@@ -73,10 +111,10 @@ const StyledRightImageContainer = styled(View)(() => ({
   position: 'relative',
   top: -50,
   mobile: {
-    bottom: -400,
     alignItems: 'flex-start',
     position: 'absolute',
-    right: 0,
+    right: -50,
+    zIndex: -1,
   },
 }));
 
@@ -92,6 +130,9 @@ const StyledRightImage = styled(Image)(() => ({
 }));
 
 const styles = StyleSheet.create({
+  scrollView: {
+    flexGrow: 1,
+  },
   imgBgContainer: {
     position: 'absolute',
     width: windowWidth,
@@ -108,13 +149,13 @@ const styles = StyleSheet.create({
     aspectRatio: 1,
   },
   heading: {
-    fontSize: 40,
+    fontSize: 50,
     fontWeight: 'bold',
     color: 'white',
     marginBottom: 15,
   },
   overview: {
-    fontSize: 14,
+    fontSize: 18,
     color: 'white',
     fontWeight: '500',
     marginBottom: 30,

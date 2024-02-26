@@ -10,17 +10,21 @@ https://github.com/Sly777/MLVisionRN/assets/694940/9416c60f-e0e9-48d3-9b67-a2fd4
 - **React Native**: The application is developed using React Native, a popular framework for building cross-platform applications.
 - **60 FPS**: The application is designed to run at 60 frames per second (FPS) on both Vision Pro and iPhone devices to create a smooth user and native experience.
 
-## Missing Features :)
+## Missing Features
 
-- 3D Models are not supported at the moment due to the lack of support for 3D models in React Native for VisionOS.
-- Multi Window support is not working due to limitation of react-native-visionos library (p.s: [it is on the way](https://github.com/callstack/react-native-visionos/pull/117)).
+- [ ] 3D Models are not supported at the moment due to the lack of support for 3D models in React Native for VisionOS.
+- [ ] Multi Window support is not working due to limitation of react-native-visionos library (p.s: [it is on the way](https://github.com/callstack/react-native-visionos/pull/117)).
+- [ ] Immersive Space is not available yet, but it is on the way.
 
 ## Installation
 
+- Install [Node.js](https://nodejs.org) (>=18) and [Yarn](https://yarnpkg.com) (3.6.4) if you haven't already.
+- Enable corepack by running `corepack enable` in your terminal if you haven't already after Yarn installation.
+- Restart your terminal to apply the changes. Then run `yarn set version 3.6.4` in the root directory to set the Yarn version.
 - Start by navigating to the root directory and run `yarn` or `yarn install` to install the necessary packages.
 - Next, navigate to the `visionos` folder and execute the following commands:
   - `bundle install` to install the necessary gems.
-  - `bundle exec pod install` to install the required pods.
+  - `bundle exec pod install` to install the required pods. _(installing boost and hermes engine packages take time)_
 - Return to the root directory and enter the `ios` folder, repeating the steps above.
 - Once again, return to the root directory and run `yarn visionos` and/or `yarn ios` to build and install the applications.
 - After the application has been built, execute `yarn start` to launch the metro server in a separate terminal window.

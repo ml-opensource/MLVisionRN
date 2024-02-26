@@ -1288,7 +1288,7 @@ SPEC CHECKSUMS:
   FBReactNativeSpec: ed19f43dea8f3da5e9b0264990a45dee62ec25d0
   fmt: 5d9ffa7ccba126c08b730252123601d514652320
   glog: 4f05d17aa39a829fee878689fc9a41af587fabba
-  hermes-engine: 269cdbb9202bff5230f870e003ecb94658c86780
+  hermes-engine: f52d3e263781e802d34b6509a7fda87b412f94e2
   libevent: a29e03f67aa3a1c501656baccbff6071a8b40a00
   RCT-Folly: 08b69b8ee3f4c5baf3a18a468b4d5a56276435fa
   RCTRequired: 01bd3bd42dbd7a432be3ff790b844b2a12dabe15

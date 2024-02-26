@@ -155,11 +155,19 @@ const styles = StyleSheet.create({
   },
   imgBgSun: {
     position: 'absolute',
-    top: '-7%',
+    top: '-12%',
+    aspectRatio: 1,
+    resizeMode: 'contain',
+    flex: 1,
+    width: 2200,
   },
   imgBgGlobe: {
     position: 'absolute',
-    top: '23%',
+    top: '28%',
+    aspectRatio: 1,
+    resizeMode: 'contain',
+    flex: 1,
+    height: 1600,
   },
 });
 
