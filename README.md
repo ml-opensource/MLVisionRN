@@ -2,7 +2,7 @@
 
 This repository contains a universal application example developed using React Native for Vision Pro and iPhone (VisionOS and iOS). It is inspired by [Apple's Hello World example for VisionOS](https://developer.apple.com/documentation/visionos/world). Please note that this example is intended for educational and demonstration purposes and is not ready for production use. All the code is provided as-is and is not supported by Apple or Facebook. Assets used in this example are provided by Apple and are not owned by the author of this repository.
 
-https://github.com/Sly777/MLVisionRN/assets/694940/9416c60f-e0e9-48d3-9b67-a2fd45662366
+**You can [check videos below](#videos) to see the application in action**
 
 ## Features
 
@@ -29,6 +29,16 @@ https://github.com/Sly777/MLVisionRN/assets/694940/9416c60f-e0e9-48d3-9b67-a2fd4
 - Once again, return to the root directory and run `yarn visionos` and/or `yarn ios` to build and install the applications.
 - After the application has been built, execute `yarn start` to launch the metro server in a separate terminal window.
 - Finally, open the application on your device or simulator to see it in action.
+
+## Videos
+
+**Universal Apps in Action**
+
+https://github.com/Sly777/MLVisionRN/assets/694940/9416c60f-e0e9-48d3-9b67-a2fd45662366
+
+**Comparison between React Native App and Original Swift App**
+
+https://github.com/monstar-lab-oss/MLVisionRN/assets/694940/74d42b6a-840b-451b-85fa-7a2aa99649c2
 
 ## Troubleshooting
 
