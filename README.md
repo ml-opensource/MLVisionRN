@@ -19,6 +19,9 @@ This repository contains a universal application example developed using React N
 ## Installation
 
 - Install [Node.js](https://nodejs.org) (>=18) and [Yarn](https://yarnpkg.com) (3.6.4) if you haven't already.
+- Install Watchman `brew install watchman` if you haven't already.
+- For xcode, make sure that xcode is installed and the command line tools are installed by running `xcode-select --install` in your terminal.
+- For xcode build, install ios-deploy `brew install ios-deploy`
 - Enable corepack by running `corepack enable` in your terminal if you haven't already after Yarn installation.
 - Restart your terminal to apply the changes. Then run `yarn set version 3.6.4` in the root directory to set the Yarn version.
 - Start by navigating to the root directory and run `yarn` or `yarn install` to install the necessary packages.
@@ -43,6 +46,12 @@ https://github.com/monstar-lab-oss/MLVisionRN/assets/694940/74d42b6a-840b-451b-8
 ## Troubleshooting
 
 If you encounter any issues during the installation or usage of this application, please refer to the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page. If you are unable to resolve the issue, please open an issue on this repository.
+
+### Known Issues
+
+> The "yarn-path" option has been set (in .../MLVisionRN/source/•yarnrc.yml), but the specified location doesn't exist
+
+This issue occurs when the `yarn-path` option is set in the `yarnrc.yml` file, but the specified location does not exist. To resolve this issue, remove the `yarn-path` option from the `yarnrc.yml` file and then run `yarn set version 3.6.4` in the root directory to set the Yarn version.
 
 ## Learn More
 
