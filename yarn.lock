@@ -3412,7 +3412,7 @@ __metadata:
     "@types/react": "npm:^18.2.6"
     "@types/react-test-renderer": "npm:^18.0.0"
     babel-jest: "npm:^29.6.3"
-    bomanti: "npm:^2.0.0"
+    bomonti: "npm:^2.0.0"
     eslint: "npm:^8.19.0"
     jest: "npm:^29.6.3"
     jotai: "npm:^2.6.5"
@@ -3904,14 +3904,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"bomanti@npm:^2.0.0":
+"bomonti@npm:^2.0.0":
   version: 2.0.0
-  resolution: "bomanti@npm:2.0.0"
+  resolution: "bomonti@npm:2.0.0"
   peerDependencies:
     react: "*"
     react-dom: "*"
     react-native: "*"
-  checksum: 10/e7471b87f71daec5de115053916cb3538c503e0bc9f556705f7c905912f51bcc6693f1472113f6a2e9de510fe268c95d2ad0e4a21860d2bc1228f050ad47f2f5
+  checksum: 10/af4694c99eea12db67aa54d38545a29a4595a6e9389693ba9dd6feb27a3dd18ceb47b6f145338d80bf1cf0cdf4b48e41a08f7319754097d897b7f2c2d943fad0
   languageName: node
   linkType: hard
 
