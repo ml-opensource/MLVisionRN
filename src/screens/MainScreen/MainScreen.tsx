@@ -11,7 +11,7 @@ import Animated, {
 } from 'react-native-reanimated';
 import {globe, orbit, solar} from '../../data/allTexts';
 import InfoBox from '../../components/InfoBox/InfoBox';
-import styled from 'bomanti';
+import styled from 'bomonti';
 import {ScrollView} from 'react-native-gesture-handler';
 import {getOSName} from '../../helpers';
 

@@ -6,7 +6,8 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import MainScreen from './src/screens/MainScreen/MainScreen';
 import DetailsScreen from './src/screens/DetailsScreen/DetailsScreen';
 import {getOSName} from './src/helpers';
-import * as Bomanti from 'bomanti';
+import {ThemeProvider} from 'bomonti';
+import {theme} from './theme.ts';
 
 LogBox.ignoreAllLogs();
 const Stack = createNativeStackNavigator();
@@ -23,10 +24,7 @@ function App(): React.JSX.Element {
   const OSName = getOSName();
   return (
     <GestureHandlerRootView style={styles.ghRootView}>
-      <Bomanti.ThemeProvider
-        value={{
-          breakpoints: {mobile: 550},
-        }}>
+      <ThemeProvider value={theme}>
         <NavigationContainer theme={navTheme}>
           <Stack.Navigator
             initialRouteName="Home"
@@ -43,7 +41,7 @@ function App(): React.JSX.Element {
             <Stack.Screen name="Details" component={DetailsScreen} />
           </Stack.Navigator>
         </NavigationContainer>
-      </Bomanti.ThemeProvider>
+      </ThemeProvider>
     </GestureHandlerRootView>
   );
 }

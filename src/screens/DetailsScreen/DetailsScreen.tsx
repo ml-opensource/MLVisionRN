@@ -9,7 +9,7 @@ import {
   Alert,
 } from 'react-native';
 import {TouchableOpacity as VisionTouchableOpacity} from '@callstack/react-native-visionos';
-import styled from 'bomanti';
+import styled from 'bomonti';
 import {getOSName} from '../../helpers';
 import {ScrollView} from 'react-native-gesture-handler';
 
