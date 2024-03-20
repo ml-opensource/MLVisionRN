@@ -7,7 +7,7 @@ import {
 } from 'react-native';
 import {ModuleTextConfig} from '../../data/textModule';
 import {TouchableOpacity as VisionTouchableOpacity} from '@callstack/react-native-visionos';
-import styled from 'bomanti';
+import styled from 'bomonti';
 import {getOSName} from '../../helpers';
 
 type Props = {

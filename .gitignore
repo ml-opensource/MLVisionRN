@@ -2,6 +2,15 @@
 #
 .DS_Store
 
+# Yarn v2
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+
 # Xcode
 #
 build/
@@ -58,7 +67,7 @@ yarn-error.log
 
 # Ruby / CocoaPods
 /ios/Pods/
-/visionos/Pods/ 
+/visionos/Pods/
 /vendor/bundle/
 
 # Temporary files created by Metro to check the health of the file watcher
@@ -66,4 +75,3 @@ yarn-error.log
 
 # testing
 /coverage
-.yarn

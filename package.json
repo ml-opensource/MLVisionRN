@@ -16,7 +16,7 @@
     "@callstack/react-native-visionos": "0.73.6",
     "@react-navigation/native": "^6.1.12",
     "@react-navigation/native-stack": "^6.9.20",
-    "bomanti": "^2.0.0",
+    "bomonti": "^2.0.0",
     "jotai": "^2.6.5",
     "react": "18.2.0",
     "react-native": "0.73.4",
@@ -48,5 +48,5 @@
   "engines": {
     "node": ">=18"
   },
-  "packageManager": "yarn@3.6.4"
+  "packageManager": "yarn@4.1.0"
 }
